@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="test_bed" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/test_bed" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../../../../Program Files/CodeBlocks/MinGW/lib/libgsl.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/test_bed" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c99" />
+		</Compiler>
+		<Unit filename="../../fission/fiss_U5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../generic/OD_vect3d.h" />
+		<Unit filename="../../generic/constant.h" />
+		<Unit filename="../../generic/file_loader.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../generic/file_loader.h" />
+		<Unit filename="../../generic/interpolation.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../generic/interpolation.h" />
+		<Unit filename="../../generic/proba.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../generic/rnd_num_gen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../h_ions/h_ion_chargestate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../h_ions/h_ion_chargestate.h" />
+		<Unit filename="../../h_ions/h_ion_gryzinski_csection.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../h_ions/h_ion_srivastava_stoppow.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../h_ions/h_ion_srivastava_stoppow.h" />
+		<Unit filename="../../h_ions/h_ion_ziegler_stoppow.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../h_ions/h_ion_ziegler_stoppow.h" />
+		<Unit filename="../../simple_models/hion_spectrum.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../simple_models/hion_spectrum.h" />
+		<Unit filename="../Ziegler_stopping_pow_test.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
