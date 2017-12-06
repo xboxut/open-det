@@ -26,7 +26,7 @@ int main()
 	for(int i=10;i<100000;i++)
     {
         V=sqrt(2.0*(double)i*1e3*OD_e/(92.0*OD_uma));
-    fprintf(fich,"%d %e %e\n",i, Ziegler_elec_stoppow(V,92.0,41.0,18.0), Ziegler_nuc_stoppow(V,92,41, 40,18));
+    fprintf(fich,"%d %e %e  %e\n",i, Ziegler_elec_stoppow(V,92.0,41.0,18.0), Ziegler_nuc_stoppow(V,92,41, 40,18));
 
     }
     fclose(fich);

@@ -15,17 +15,17 @@ double Gryz_Eexch_ie_csection(double Vp,double Mp,double q, double dE, double Ub
 int main()
 {
 
-double E0=68.0e6;
-double Mp=139;
-double Zp=57;
-double R=7.74e-6;
-//double E0=99.01e6;
-//double Mp=95;
-//double Zp=42;
-//double R=10.02e-6;
+//double E0=68.0e6;
+//double Mp=139;
+//double Zp=57;
+//double R=7.74e-6;
+double E0=99.01e6;
+double Mp=95;
+double Zp=42;
+double R=10.02e-6;
 
 double L=3e-6;
-double n=1.65;
+double n=1.69;
 double Zt=18.0;
 double Mt=40.0;
 
