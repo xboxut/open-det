@@ -69,6 +69,11 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="../../h_ions/h_ion_ziegler_stoppow.h" />
+		<Unit filename="../../pic_models/pic_grid1D.h" />
+		<Unit filename="../../pic_models/pic_particle.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../pic_models/pic_particle.h" />
 		<Unit filename="../../simple_models/hion_spectrum.c">
 			<Option compilerVar="CC" />
 		</Unit>

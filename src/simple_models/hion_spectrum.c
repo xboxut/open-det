@@ -26,7 +26,7 @@ en sortie d'un dépot de profondeur L.
 -----------------------------------------------------------------
 Provenance:
 CEA Cadarache, DEN/DER/SPEx/LPE
-G. de Izarra
+G. de Izarra et A. Amamra
 ------------------------------------------------------------------
 La fonction prend en paramètre:
 
@@ -66,7 +66,7 @@ sortie d'un dépôt semi infini d'épaisseur L.
 -----------------------------------------------------------------
 Provenance:
 CEA Cadarache, DEN/DER/SPEx/LPE
-G. de Izarra
+G. de Izarra et A. Amamra
 ------------------------------------------------------------------
 La fonction prend en paramètre:
 
@@ -183,7 +183,7 @@ Le modèle utilise des lois de modération ou:
 -----------------------------------------------------------------
 Provenance:
 CEA Cadarache, DEN/DER/SPEx/LPE
-G. de Izarra
+G. de Izarra et A. Amamra
 ------------------------------------------------------------------
 La fonction prend en paramètre:
 
@@ -246,7 +246,7 @@ double hion_mc1_spec_dep_o(gsl_rng * r,double E0, double L, double RE0, double n
      return -1.0;
     }
 }
-//#endif
+#endif
 
 
 
@@ -289,7 +289,7 @@ int test_hion_spectrum()
 
     fclose(fich);
 
-
+    #ifdef USE_GSL
     printf("*******Modele monte_carlo one shot*****\n");
 
     printf("creation du fichier 'TESThion_mc1_spec_dep_o.txt'\n");
@@ -300,9 +300,11 @@ int test_hion_spectrum()
         return 0;
     }
 
+
     printf("Tirage de 30000 fragments de fission lourds\n");
 
     // init du gene de nombre aleatoire
+
         gsl_rng * r = gsl_rng_alloc (gsl_rng_mt19937);
         gsl_rng_set(r,time(NULL));
 
@@ -343,8 +345,8 @@ int test_hion_spectrum()
     }
 
     fclose(fich);
-
+    #endif
     printf("fin du test des modeles concernant le spectre de sortie des fragments de fission.\n");
     return 1;
 }
-#endif // USE_GSL
+

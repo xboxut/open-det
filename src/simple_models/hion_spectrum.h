@@ -1,38 +1,14 @@
 
 
 
-/****************************************************************
-hion_analytic_spec_dep_o()
------------------------------------------------------------------
-utilité:
-
-Cette routine permet de calculer le spectre d'ions énergétiques
-en sortie d'un dépot de profondeur L.
-
-
------------------------------------------------------------------
-Provenance:
-CEA Cadarache, DEN/DER/SPEx/LPE
-G. de Izarra et A. Amamra
-------------------------------------------------------------------
-La fonction prend en paramètre:
-
-E   l'énergie d'interêt (l'unité est libre mais doit etre similaire
-    a celle de E0)
-L   L'épaisseur du dépot (en cm).
-E0  L'énergie initiale de l'ion.
-RE0 Le range d'un ion à E0 dans le matériau considéré (en cm).
-n   une puissance pour la loi de modération empirique E=E0(1-x/R)^n
-rrate le taux de réaction à l'origine des ions énergétiques en (cm^3)
-
-
-*****************************************************************/
 
 
 double hion_analytic_spec_dep_o(double E,double L, double E0, double RE0,double n,double rrate);
 
 
+
 #ifdef USE_GSL
+
 /****************************************************************
 hion_mc0_spec_dep_o()
 -----------------------------------------------------------------
@@ -44,7 +20,7 @@ sortie d'un dépôt semi infini d'épaisseur L.
 -----------------------------------------------------------------
 Provenance:
 CEA Cadarache, DEN/DER/SPEx/LPE
-G. de Izarra
+G. de Izarra et A. Amamra
 ------------------------------------------------------------------
 La fonction prend en paramètre:
 
@@ -104,8 +80,7 @@ mis a NULL, rien n'est copié.
 double hion_mc1_spec_dep_o(gsl_rng * r,double E0, double L, double RE0, double n, OD_vect3d *dir);
 
 
+#endif // USE_GSL
 
 
 int test_hion_spectrum();
-
-#endif // USE_GSL
